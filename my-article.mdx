@@ -1,0 +1,62 @@
+---
+title: "Review Sync Log in Org Management "
+---
+
+Use **Sync Log** in **Org Management** to review sync activity for your integration source, confirm when a sync ran, and identify errors that need follow-up. 
+
+After a sync completes, the integration results are broken down by synced categories such as Teachers, Students, Classrooms, Guardians, and OUs when that source is in use. Each category can be expanded to show more detail. Categories with a green checkmark indicate no errors, and a yellow triangle indicates at least 1 error.
+
+Please consider the following result counts to understand what changed during the sync:
+
+- **Created**: New records added during the sync
+- **Updated**: Existing records that have changed
+- **Unchanged**: Reviewed but not changed
+- **Integrated**: Included in the integration
+- **Deintegrated**: Removed from the integration
+
+This article is for IT Admins who manage integrations at the school or district level and need to verify sync results before making changes to source data or integration settings.
+
+## Review Sync Results
+
+1. Go to **Reporting** \> **Logs** in Org Management.
+2. Click **Sync Log**.
+3. Select **Source** and choose the integration you want to review.
+4. Enter a **Start Time** and **End Time** if you need to narrow the results.
+5. Find the sync entry you want to inspect.
+6. Click the expand icon for the sync entry.
+7. Review the synced categories for your source.
+8. Click a category row to review additional sync details and any errors.\
+   \
+   Tip: If a category shows an error, click Download to collect the full error report. The downloaded file is a zip file that contains separate CSV files for sync fields such as teacher, student, or classroom records, and the IDs in those CSV files map to the source system’s internal IDs.
+
+<Frame>
+  ![Rta Image](/images/rtaImage.jpg)
+</Frame>
+
+ 
+
+## FAQ
+
+**What does Sync Log show?**
+
+Sync Log shows when a sync ran, which source it used, and whether the sync completed successfully or returned errors. It also shows category-level results so admins can review what changed.
+
+**When should I use Sync Log?**
+
+Use Sync Log after a manual or scheduled sync to confirm the result and review changes. It is also useful when users, classes, or groups are missing after a sync.
+
+**What should I do if a sync shows errors?**
+
+Expand the affected category and download the error log if you need record-level details. Please confirm that your data source has the correct information because GoGuardian syncs directly from it.
+
+**Does Sync Log fix sync errors?**
+
+No. Sync Log shows the sync result and helps identify where the problem occurred. Use the related troubleshooting articles to resolve the underlying source data or integration issue.
+
+## Resources
+
+- [<u>GoGuardian Administrators: Integrations for GoGuardian Teacher Overview</u>](https://support.goguardian.com/s/article/Integrations-for-GoGuardian-Teacher-1630088199161)
+- [<u>Integration Errors: Troubleshoot Sync Issues With Clever and ClassLink </u>](https://support.goguardian.com/s/article/Integration-Errors-Clever-and-ClassLink-Error-Troubleshooting)
+- [<u>Clever, ClassLink, and OneRoster Integrations FAQ</u>](https://support.goguardian.com/s/article/Clever-and-ClassLink-Integrations-FAQ-1629765161385)
+
+Review Sync Log in Org Management
