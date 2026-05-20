@@ -1,17 +1,7 @@
 ---
 title: "GoGuardian Teacher - Complete Setup & Classroom Management Guide"
 description: "A comprehensive guide to setting up GoGuardian Teacher for classroom management, including device configuration, session scheduling, content filtering, and student monitoring best practices."
-keywords:
-  - GoGuardian Teacher
-  - Classroom Management
-  - Student Monitoring
-  - Content Filtering
-  - Device Management
-  - Scenes
-  - Student Groups
-  - K-12 Education
-  - Digital Learning
-  - Screen Monitoring
+keywords: ["GoGuardian Teacher", "Classroom Management", "Student Monitoring", "Content Filtering", "Device Management", "Scenes", "Student Groups", "K-12 Education", "Digital Learning", "Screen Monitoring", "Test Search"]
 ---
 
 ## Introduction
@@ -19,7 +9,7 @@ keywords:
 GoGuardian Teacher is a powerful classroom management tool designed to help educators create focused, engaging digital learning environments. This guide walks you through the complete setup process — from initial configuration to advanced features like Scenes, Student Groups, and real-time monitoring.
 
 <Note>
-This guide applies to GoGuardian Teacher version 3.x and above. If you are running an older version, please contact your IT administrator to upgrade before proceeding.
+  This guide applies to GoGuardian Teacher version 3.x and above. If you are running an older version, please contact your IT administrator to upgrade before proceeding.
 </Note>
 
 ---
@@ -29,16 +19,16 @@ This guide applies to GoGuardian Teacher version 3.x and above. If you are runni
 Before setting up GoGuardian Teacher, ensure your environment meets the following requirements:
 
 | Requirement | Minimum Specification | Recommended |
-|---|---|---|
-| **Browser** | Chrome 90+ | Latest Chrome |
+| --- | --- | --- |
+| **Browser** | Chrome 90\+ | Latest Chrome |
 | **Operating System** | ChromeOS, Windows 10, macOS 10.15 | ChromeOS / Windows 11 |
-| **iOS Support** | iOS 15+ | iOS 17+ |
+| **iOS Support** | iOS 15\+ | iOS 17\+ |
 | **Network** | 5 Mbps per device | 10 Mbps per device |
 | **Google Workspace** | Education edition | Education Plus |
 | **Display Resolution** | 1280 x 720 | 1920 x 1080 |
 
 <Warning>
-GoGuardian Teacher requires the GoGuardian Chrome Extension to be installed on all student devices. This is typically deployed via Google Admin Console by your IT team.
+  GoGuardian Teacher requires the GoGuardian Chrome Extension to be installed on all student devices. This is typically deployed via Google Admin Console by your IT team.
 </Warning>
 
 ---
@@ -51,7 +41,7 @@ The GoGuardian Chrome extension is the foundation of classroom management. IT ad
 
 Navigate to Google Admin Console and follow these steps:
 
-```
+```text
 Google Admin Console → Devices → Chrome → Apps & Extensions → Users & Browsers
 ```
 
@@ -79,7 +69,7 @@ Once the extension is deployed, verify it appears in a student's Chrome browser:
 4. If not visible, contact your IT administrator
 
 <Tip>
-You can verify the extension is working by starting a test session with a single device before rolling out to the entire class.
+  You can verify the extension is working by starting a test session with a single device before rolling out to the entire class.
 </Tip>
 
 ---
@@ -88,7 +78,7 @@ You can verify the extension is working by starting a test session with a single
 
 ### Starting a Session
 
-```
+```text
 GoGuardian Dashboard → Teacher → Classes → Select Class → Start Session
 ```
 
@@ -119,7 +109,7 @@ print(f"Session started: {response.session_id}")
 ```
 
 <Info>
-Sessions can also be **scheduled** to start and stop automatically. This is ideal for teachers with consistent daily schedules — set it once and it runs all semester.
+  Sessions can also be **scheduled** to start and stop automatically. This is ideal for teachers with consistent daily schedules — set it once and it runs all semester.
 </Info>
 
 ---
@@ -134,12 +124,15 @@ Sessions can also be **scheduled** to start and stop automatically. This is idea
   <Card title="Open Browsing" icon="globe">
     Students can access any website not blocked by the district-level filter. Best for research projects and free exploration time.
   </Card>
+
   <Card title="Focused Browsing" icon="bullseye">
     Only pre-approved websites are accessible. Ideal for test-taking, specific assignments, or guided activities.
   </Card>
+
   <Card title="Blocked List" icon="ban">
     All sites are allowed except those you specifically block. Good for removing common distractions like social media and games.
   </Card>
+
   <Card title="Custom Scene" icon="sliders">
     Mix of allowed and blocked sites tailored to a specific lesson or activity.
   </Card>
@@ -224,7 +217,7 @@ GoGuardian provides a live thumbnail view of every student's screen. The view re
 ### Teacher Commands
 
 | Command | Action | Keyboard Shortcut |
-|---|---|---|
+| --- | --- | --- |
 | **Open Tab** | Opens a specific URL on all student devices | `Ctrl + Shift + O` |
 | **Close Tab** | Closes a specific tab on all student devices | `Ctrl + Shift + C` |
 | **Lock Screen** | Locks all student screens with a custom message | `Ctrl + Shift + L` |
@@ -236,12 +229,12 @@ GoGuardian provides a live thumbnail view of every student's screen. The view re
 
 The two-way chat allows private communication with individual students:
 
-```
+```text
 Teacher → Click student thumbnail → Chat icon → Type message → Send
 ```
 
 <Note>
-Chat messages are logged and available in session reports. This provides documentation for parent-teacher conferences and administrative review.
+  Chat messages are logged and available in session reports. This provides documentation for parent-teacher conferences and administrative review.
 </Note>
 
 ---
@@ -314,6 +307,7 @@ curl -X GET "https://api.goguardian.com/v2/reports/sessions/{session_id}" \
   **Cause**: Extension deployment may be pending in Google Admin Console.
 
   **Solution**:
+
   1. Verify the extension is force-installed in Google Admin Console
   2. Check the target OU (Organizational Unit) includes the student device
   3. Have the student restart Chrome or reboot the device
@@ -331,18 +325,20 @@ curl -X GET "https://api.goguardian.com/v2/reports/sessions/{session_id}" \
   **Cause**: Roster sync issue between Google Classroom and GoGuardian.
 
   **Solution**:
+
   1. Confirm the student is enrolled in the Google Classroom class
   2. Check that the student is signed into Chrome with their school account
   3. Refresh the GoGuardian session
   4. Contact GoGuardian support if the issue persists
 
-  **Support**: support@goguardian.com | 1-855-GO-GUARD
+  **Support**: [support@goguardian.com](mailto:support@goguardian.com) | 1-855-GO-GUARD
 </Accordion>
 
 <Accordion title="Scenes Not Applying Correctly">
   **Cause**: Conflicting district-level filter policies may override classroom Scenes.
 
   **Solution**:
+
   1. District filters always take priority over teacher Scenes
   2. If a site is blocked at the district level, teacher Scenes cannot unblock it
   3. Use the "Temporary Unlock" feature to request a site be allowed for your session
@@ -354,26 +350,21 @@ curl -X GET "https://api.goguardian.com/v2/reports/sessions/{session_id}" \
 ## Best Practices for Effective Classroom Management
 
 <Note>
-These recommendations are based on feedback from over 1.9 million educators using GoGuardian Teacher across 15.3 million student devices.
+  These recommendations are based on feedback from over 1.9 million educators using GoGuardian Teacher across 15.3 million student devices.
 </Note>
 
 1. **Start every class with a Scene**: Set browsing expectations from the first minute. Students learn the routine quickly and transition time drops significantly.
-
 2. **Use Chat for quiet redirection**: Instead of calling out a student publicly, send a private chat message. This maintains classroom flow and respects student dignity.
-
 3. **Schedule sessions in advance**: Eliminate the daily overhead of starting and stopping sessions. Scheduled sessions ensure consistent coverage.
-
 4. **Review reports weekly**: Don't wait for parent-teacher conferences. A quick weekly review of browsing reports helps you spot trends and address issues early.
-
 5. **Create reusable Scenes**: Build a library of Scenes for different activity types (testing, research, free time, presentations). Switch between them with one click.
-
 6. **Leverage Student Groups for differentiation**: GoGuardian's drag-and-drop Groups make it easy to personalize browsing access for different student needs without additional planning overhead.
 
 ---
 
 ## Quick Reference: Keyboard Shortcuts
 
-```
+```text
 Ctrl + Shift + O    →    Open tab on student devices
 Ctrl + Shift + C    →    Close tab on student devices
 Ctrl + Shift + L    →    Lock all screens
@@ -389,8 +380,8 @@ Ctrl + Shift + R    →    Refresh screen views
 ## Need Help?
 
 | Resource | Link |
-|---|---|
-| **GoGuardian Support** | support@goguardian.com |
+| --- | --- |
+| **GoGuardian Support** | [support@goguardian.com](mailto:support@goguardian.com) |
 | **Phone** | 1-855-GO-GUARD (1-855-464-8273) |
 | **Help Center** | help.goguardian.com |
 | **Community Forum** | community.goguardian.com |
