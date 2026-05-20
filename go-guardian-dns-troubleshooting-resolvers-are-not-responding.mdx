@@ -1,0 +1,14 @@
+---
+title: "GoGuardian DNS Troubleshooting: Resolvers are Not Responding"
+---
+
+It seems your resolvers are not responding. What’s wrong?
+
+Please ensure you’ve added your network’s public IP addresses when creating your networks. If this is not done, our servers won’t be able to authenticate the traffic sent from your network.
+
+Please ensure you’ve redirected your network’s DNS traffic to our resolvers. Find the device or server on your network that maintains the addresses of your public DNS servers - most often a router or firewall. Typically, the device that provides an internal non-routable IP address (DHCP) or the device that serves as your default gateway is also where you configure public DNS servers.
+
+To test your connectivity, try using the terminal/cmd command “nslookup [<u>goguardian.com</u>](http://goguardian.com) xx.xx.xx.xx to each of our provided DNS server IPs to test your connectivity to our servers. No response? Ensure your device’s public IP address matches the value you’ve provided in the setup guide. If there is a match, verify that any network filters or firewalls allow incoming and outgoing traffic to our DNS servers.\
+ 
+
+GoGuardian DNS Troubleshooting: Resolvers are Not Responding
